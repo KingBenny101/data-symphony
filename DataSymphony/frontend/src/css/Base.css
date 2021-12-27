@@ -1,0 +1,9 @@
+.base {
+    width: 100vw;
+    height: 70vh;
+    color: white;
+    font-size: calc(10px + 4vmin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

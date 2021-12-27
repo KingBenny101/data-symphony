@@ -1,0 +1,9 @@
+.title {
+  font-size: calc(10px + 4vmin);
+  height: 16vh;
+  width: 30vw;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 5vw;
+}
