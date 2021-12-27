@@ -1,9 +1,11 @@
 .title {
   font-size: calc(10px + 4vmin);
-  height: 16vh;
-  width: 30vw;
+  height: 10vh;
+  width: 70vw;
   display: flex;
   justify-content: left;
   align-items: center;
   padding-left: 5vw;
+  white-space: nowrap;
+  overflow: hidden;
 }

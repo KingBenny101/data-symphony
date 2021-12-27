@@ -5,10 +5,10 @@ function Navigator (){
     return (
         <div className="navigator">
             <div className="navigatorButtons">
-                Upload
+                <span>Upload</span>
             </div>
             <div className="navigatorButtons">
-                About
+                <span>About</span>
             </div>
         </div>
     )

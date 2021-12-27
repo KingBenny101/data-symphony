@@ -1,9 +1,40 @@
+.baseContainer {
+  width: 100vw;
+  height: 90vh;
+  color: white;
+  font-size: calc(10px + 4vmin);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .base {
-    width: 100vw;
-    height: 70vh;
-    color: white;
-    font-size: calc(10px + 4vmin);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 60vw;
+  max-height: 60vmin;
+  height: 70vh;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 2vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.uploadButton {
+  width: 10vmin;
+  height: 10vmin;
+  background-image: url("../assets/cloud-upload_3.svg");
+  background-size:contain;
+  background-repeat: no-repeat;
+  margin-top: 4vh;
+}
+
+.uploadText {
+  font-size: calc(10px + 2vmin);
+}
+
+.uploadText span {
+  color: black;
 }

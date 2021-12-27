@@ -1,19 +1,20 @@
 .navigator {
-    width: 70vw;
-    height: 16vh;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding-right: 2vw;
+  width: 30vw;
+  height: 16vh;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 2vw;
 }
 
 .navigatorButtons {
-    padding-left: 2vw;
-    padding-right: 2vw;
-    
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-size: calc(5px + 2vmin);
+
 }
 
-.navigatorButtons:hover{
-    color: grey;
-    cursor: pointer;
+.navigatorButtons:hover {
+  color: grey;
+  cursor: pointer;
 }
