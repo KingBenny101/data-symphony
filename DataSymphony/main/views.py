@@ -37,18 +37,33 @@ def mainList(request):
     return Response(serializer.data)
 
 
-# @api_view(['POST'])
-# def mainCreate(request):
-#     serializer = VideoUploadSerializer(data = request.data)
+@api_view(['GET'])
+def mainView(request,pk):
+    entry = VideoUpload.objects.get(id = pk)
+    serializer = VideoUploadSerializer(entry,many=False)
+
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def mainUpdate(request,pk):
+    prev_data = VideoUpload.objects.get(id=pk)
+    serializer = VideoUploadSerializer(instance=prev_data,data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+    
+    return Response(serializer.data)
 
 
-#     if serializer.is_valid():
-#         print("Valid!!!")
-#         serializer.save()
-
-#     return Response(serializer.data)
+@api_view(['DELETE'])
+def mainDelete(request,pk):
+    entry = VideoUpload.objects.get(id=pk)
+    entry.delete()
+    return Response(f'Item {pk} Successfully Deleted!!!')
 
 
 class VideoUploadCreateAPIView(CreateAPIView):
     queryset = VideoUpload.objects.all()
     serializer_class = VideoUploadSerializer
+
+
