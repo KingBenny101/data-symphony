@@ -3,6 +3,7 @@ import HeaderTitle from './components/HeaderTitle';
 import Navigator from './components/Navigator'
 import Base from './components/Base';
 import Footer from './components/Footer';
+import About from  './components/About';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Navigator/>
       </header>
       <Base/>
+      <About/>
       <Footer/>
     </div>
   );
