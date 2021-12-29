@@ -6,3 +6,8 @@ class VideoUploadSerializer(serializers.ModelSerializer):
     class Meta:
         model = VideoUpload
         fields = '__all__'
+
+
+
+class VideoReportSerializer():
+    pass

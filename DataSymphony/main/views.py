@@ -8,6 +8,8 @@ from rest_framework.response import Response
 
 from .models import VideoUpload
 
+
+
 from .serializers import VideoUploadSerializer
 
 
@@ -23,6 +25,7 @@ def mainOverview(request):
         'Create': '/create/',
         'Update': '/update/<str:pk>/',
         'Delete': '/delete/<str:pk>/',
+        'Report' : '/report/<str:pk>',
 
 
     }
@@ -62,8 +65,23 @@ def mainDelete(request,pk):
     return Response(f'Item {pk} Successfully Deleted!!!')
 
 
-class VideoUploadCreateAPIView(CreateAPIView):
+@api_view(['GET'])
+def mainReport(request,pk):
+
+    try:
+        entry = VideoUpload.objects.get(id = pk)
+        serializer = VideoUploadSerializer(entry,many=False)
+        #parseData(serializer.data)
+        return Response(serializer.data)
+
+    except VideoUpload.DoesNotExist:
+        return Response(f'Entry {pk} not found')
+
+
+class mainCreate(CreateAPIView):
     queryset = VideoUpload.objects.all()
     serializer_class = VideoUploadSerializer
+
+
 
 
