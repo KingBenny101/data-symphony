@@ -1,6 +1,17 @@
 import "../css/About.css";
+import Markdown from "markdown-to-jsx";
+import { useState} from "react";
+import "../markdown/about.md";
 
 function About() {
+  const file_name = require("../markdown/about.md");
+  const [post, setPost] = useState("");
+
+  fetch(file_name)
+    .then((res) => res.text())
+    .then((res) => setPost(res))
+    .catch((err) => console.log(err));
+
   return (
     <div className="aboutContainer">
       <div className="aboutTitleContainer">
@@ -9,8 +20,7 @@ function About() {
         </div>
       </div>
       <div className="aboutBodyContainer">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl purus in mollis nunc sed id semper. Commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Faucibus purus in massa tempor nec feugiat nisl pretium. Sit amet risus nullam eget felis eget. Risus ultricies tristique nulla aliquet enim. Viverra adipiscing at in tellus. Risus nullam eget felis eget nunc lobortis mattis aliquam. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl purus in mollis nunc sed id semper. Commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Faucibus purus in massa tempor nec feugiat nisl pretium. Sit amet risus nullam eget felis eget. Risus ultricies tristique nulla aliquet enim. Viverra adipiscing at in tellus. Risus nullam eget felis eget nunc lobortis mattis aliquam. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+        <Markdown >{post}</Markdown>
       </div>
     </div>
   );

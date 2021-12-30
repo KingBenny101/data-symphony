@@ -26,24 +26,26 @@
 .aboutBodyContainer {
 
     width: 90vw;
-    display: flex;
+    /* display: flex;
     justify-content: left;
-    align-items: center;
-    font-size: calc(10px + 1vmin);
-
-
-}
-
-.aboutBodyContainer p {
-    margin-top: 0;
+    align-items: center; */
     text-align: left;
+    color: black;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
+
 
 .aboutTitle {
     padding-left: 5vw;
+    margin-bottom: 0;
 }
 
 .aboutTitle span {
     color: white;
 }
 
+.aboutMarkDown {
+    width: 100vw;
+}
