@@ -1,16 +1,22 @@
 import "../css/Base.css";
-
+import UploadFiles from "./FileUploader";
 
 function Base (){
     return (
         <div className="baseContainer">
             <div className="base">
-                <div className="uploadText">
+                {/* <div className="uploadText">
                     <span>Upload Video</span>
                 </div>
                 <div className="uploadButton">
 
-                </div>
+                </div> */}
+                {/* <div className="uploadDragDrop">
+                    <DragDrop/>
+                </div> */}
+                <UploadFiles/>
+
+                
             </div>
         </div>
     )

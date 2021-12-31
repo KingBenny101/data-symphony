@@ -8,25 +8,26 @@
   align-items: center;
 }
 
-
 .base {
   width: 60vw;
   max-height: 60vmin;
   height: 70vh;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 2vmin;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+  color: black;
 }
 
 .uploadButton {
   width: 10vmin;
   height: 10vmin;
   background-image: url("../assets/cloud-upload_3.svg");
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
   margin-top: 4vh;
 }
@@ -36,5 +37,9 @@
 }
 
 .uploadText span {
+  color: black;
+}
+
+.uploadDragDrop {
   color: black;
 }

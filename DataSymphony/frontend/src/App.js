@@ -5,6 +5,8 @@ import Base from './components/Base';
 import Footer from './components/Footer';
 import About from  './components/About';
 
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   return (
     <div className="App">

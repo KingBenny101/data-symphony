@@ -1,26 +1,36 @@
 import "../css/About.css";
-import Markdown from "markdown-to-jsx";
-import { useState} from "react";
-import "../markdown/about.md";
 
 function About() {
-  const file_name = require("../markdown/about.md");
-  const [post, setPost] = useState("");
-
-  fetch(file_name)
-    .then((res) => res.text())
-    .then((res) => setPost(res))
-    .catch((err) => console.log(err));
-
   return (
     <div className="aboutContainer">
-      <div className="aboutTitleContainer">
+      {/* <div className="aboutTitleContainer">
         <div className="aboutTitle">
           <span>About</span>
         </div>
-      </div>
+      </div> */}
       <div className="aboutBodyContainer">
-        <Markdown >{post}</Markdown>
+        <div className="aboutBodyColumn">
+          <div className="aboutBodyColumnTitle">
+            Purpose
+          </div>
+          <div className="aboutBodyColumnBody">
+            <span>Made for MTX Hackathon 2021</span>
+            
+          </div>
+        </div>
+        <div className="aboutBodyColumn">
+          <div className="aboutBodyColumnTitle">Developed By</div>
+          <div className="aboutBodyColumnBody">
+            <span>Team Data Symphony</span>
+          </div>
+        </div>
+        <div className="aboutBodyColumn">
+          <div className="aboutBodyColumnTitle">Contact</div>
+
+          <div className="aboutBodyColumnBody">
+            <span>blah blah blah</span>
+          </div>
+        </div>
       </div>
     </div>
   );
