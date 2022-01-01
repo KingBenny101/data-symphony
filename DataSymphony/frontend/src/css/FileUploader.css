@@ -1,18 +1,20 @@
-.dropzone {
-    text-align: center;
-    padding: 30px;
-    border: 3px dashed #eeeeee;
-    background-color: #fafafa;
-    color: #bdbdbd;
+
+
+  .genReport {
+    font-size: calc(5px+1vmin);
+    padding: 1vmin;
+    background-color: purple;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1vmin;
+
+  }
+
+  .genReport :hover {
     cursor: pointer;
-    margin-bottom: 20px;
   }
-  
-  .selected-file-wrapper {
-    text-align: center;
-  }
-  
-  .selected-file {
-    color: #000; 
-    font-weight: bold;
+
+
+
+  .genReport span:hover {
+    cursor: pointer;
   }
