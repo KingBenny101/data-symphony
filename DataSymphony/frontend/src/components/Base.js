@@ -1,26 +1,31 @@
+import { useState } from "react";
 import "../css/Base.css";
 import UploadFiles from "./FileUploader";
+import Report from "./Report";
 
-function Base (){
-    return (
-        <div className="baseContainer">
-            <div className="base">
-                {/* <div className="uploadText">
-                    <span>Upload Video</span>
-                </div>
-                <div className="uploadButton">
+function Base() {
+  const [isReport, setIsReport] = useState(false);
+  const [reportID,setReportID] = useState("");
 
-                </div> */}
-                {/* <div className="uploadDragDrop">
-                    <DragDrop/>
-                </div> */}
-                <UploadFiles/>
 
-                
-            </div>
+  const handleGenerateReport = (id)=>{
+    setIsReport(true);
+    setReportID(id);
+  }
+
+
+
+  return (
+    <div className="baseContainer">
+      {isReport ? (
+        <Report reportID = {reportID}/>
+      ) : (
+        <div className="base">
+          <UploadFiles handle = {handleGenerateReport}/>
         </div>
-    )
+      )}
+    </div>
+  );
 }
-
 
 export default Base;

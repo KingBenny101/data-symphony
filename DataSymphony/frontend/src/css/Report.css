@@ -1,0 +1,53 @@
+.reportContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    
+}
+
+.reportItems {
+    width: 80vw;
+    margin: 4vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+
+.btn-group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+.btn-group button {
+    background-color: #04AA6D; /* Green background */
+    color: white; /* White text */
+    border: #3e8e41;
+    padding: 1vmin 2vmin; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    display: flex; /* Make the buttons appear below each other */
+    align-items: center;
+    justify-content: center;
+    margin: 2vmin;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+  
+  .btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }

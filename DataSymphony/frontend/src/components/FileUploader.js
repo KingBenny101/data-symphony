@@ -4,7 +4,7 @@ import { useDropzone } from "react-dropzone";
 //import UploadService from "../services/FileUploader.service";
 import axios from "axios";
 
-function UploadFiles() {
+function UploadFiles({handle}) {
   const [entries, setEntries] = useState([
     {
       id: null,
@@ -24,6 +24,7 @@ function UploadFiles() {
       .get(`http://127.0.0.1:8000/main/view/${fileData.id}`)
       .then((response) => {
         console.log(response.data);
+        handle(response.data.id);
       })
       .catch((error) => {
         console.log(error);

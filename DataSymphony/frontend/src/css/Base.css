@@ -1,6 +1,6 @@
 .baseContainer {
   width: 100vw;
-  height: 90vh;
+  min-height: 80vh;
   color: white;
   font-size: calc(10px + 4vmin);
   display: flex;
