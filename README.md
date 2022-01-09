@@ -11,19 +11,19 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
 ## How to run the app
 > These steps were written such that anyone even beginners can run this app on their machines.
 ### Setting up the workspace.  
-    * Clone the repository using the following command.
+* Clone the repository using the following command.
     ```bash
     git clone https://github.com/benstindavis/mtx-data-symphony.git
     ```
-    * Navigate to the repository folder
+* Navigate to the repository folder
     ```bash
     cd mtx-data-symphony
     ```
-    * Create a python virtual environment using the following command.
+* Create a python virtual environment using the following command.
     ```bash
     python -m venv ./env
     ```
-    * Start the virtual environment using the script coresponding to your openrating system.
+* Start the virtual environment using the script coresponding to your openrating system.
         * Windows 
         ```bash
             \env\Scripts\activate.bat
@@ -32,11 +32,11 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
         ```bash
             \env\Scripts\activate
         ```
-    * Install all the requirements using the following command.
+* Install all the requirements using the following command.
     ```bash
     pip install -r mtx-data-symphony/DataSymphony/requirements.txt
     ```
-    * The workspace has been set up, if you faced no errors the your working directory tree should look like this.
+* The workspace has been set up, if you faced no errors the your working directory tree should look like this.
     ```bash
     ├───DataSymphony/
     │   ├───DataSymphony/
