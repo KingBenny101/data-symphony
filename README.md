@@ -129,3 +129,6 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
 
 ## Contributors 
 - [Benstin Davis](https://github.com/benstindavis)
+- [Davidson] 
+- [Vignesh]
+- [Suryavarman]
