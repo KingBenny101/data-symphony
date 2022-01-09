@@ -22,7 +22,7 @@ function Report({ reportID }) {
   };
 
   useEffect(() => {
-    if (reportID != "") {
+    if (reportID !== "") {
       axios
         .get(`http://127.0.0.1:8000/main/report/${reportID}`)
         .then((response) => {
