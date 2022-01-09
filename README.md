@@ -125,3 +125,7 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
   ```bash
   python manage.py runserver
   ```
+
+
+## Contributors 
+- [Benstin Davis](https://github.com/benstindavis)
