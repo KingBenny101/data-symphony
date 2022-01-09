@@ -2,12 +2,20 @@
 
 Project made for MTX Hackathon 2021 by Team DataSymphony.
 
+## Requirements
+- Python >= 3.9.5 
+- Node >= v16.1.0
+- Npm >= 8.3.0
+
 ## About the app
 
 - This is a basket ball scoring event classifier.
 - The development was divided into two parts.
   - The video classifier made in python using py-torch.
   - The website made in python Django and reactJS.
+  - [Frontend](https://github.com/benstindavis/mtx-data-symphony/tree/main/DataSymphony/frontend)
+  - [Backend](https://github.com/benstindavis/mtx-data-symphony/tree/main/DataSymphony)
+  - [Machine Learning Model](https://github.com/benstindavis/mtx-data-symphony/tree/main/DataSymphony/external)
 
 ## How to run the app
 
