@@ -28,7 +28,13 @@ function About() {
           <div className="aboutBodyColumnTitle">Contact</div>
 
           <div className="aboutBodyColumnBody">
-            <span>blah blah blah</span>
+            <span>Benstin Davis</span>
+            <span>Davidson</span>
+            <span>Suryavarman</span>
+            <span>Vignesh</span>
+
+
+
           </div>
         </div>
       </div>
