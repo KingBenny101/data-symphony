@@ -129,6 +129,6 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
 
 ## Contributors 
 - [Benstin Davis](https://github.com/benstindavis)
-- [Davidson] 
-- [Vignesh]
-- [Suryavarman]
+- [Davidson](https://github.com/Davidson-Paul)
+- [Suryavarman](https://github.com/Surya-Varman)
+- [Vignesh](https://github.com/Vigz-game)
