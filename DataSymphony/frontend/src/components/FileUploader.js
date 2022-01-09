@@ -4,6 +4,9 @@ import { useDropzone } from "react-dropzone";
 //import UploadService from "../services/FileUploader.service";
 import axios from "axios";
 
+
+const MAIN_URL = 'https://mtx-data-symphony.herokuapp.com'
+
 function UploadFiles({handle}) {
   const [entries, setEntries] = useState([
     {
@@ -21,7 +24,7 @@ function UploadFiles({handle}) {
 
     const handleReportBtnClick =()=>{
       axios
-      .get(`http://127.0.0.1:8000/main/view/${fileData.id}`)
+      .get(`/main/view/${fileData.id}`)
       .then((response) => {
         handle(response.data.id);
       })
@@ -44,7 +47,7 @@ function UploadFiles({handle}) {
   useEffect(() => {
     
     axios
-      .get("http://127.0.0.1:8000/main/list/")
+      .get("/main/list/")
       .then((response) => {
         setEntries(response.data);
       })
@@ -64,7 +67,7 @@ function UploadFiles({handle}) {
 
    
     axios
-      .post("http://127.0.0.1:8000/main/create/", formData)
+      .post("/main/create/", formData)
       .then((response) => {
         setFileData(response.data);
         setUploadBox("Uploaded!!");

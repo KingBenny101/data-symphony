@@ -27,8 +27,9 @@ SECRET_KEY = 'django-insecure-1o(2+054vx*43a#e9)i6#fkl!#gcq%5t!4k_9rsmywxnefkl%&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
-
+ALLOWED_HOSTS = ['https://mtx-data-symphony.herokuapp.com',
+                 'localhost',
+                 '127.0.0.1']
 
 # Application definition
 
@@ -48,15 +49,15 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'DataSymphony.urls'
@@ -65,7 +66,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'frontend/build')
+            os.path.join(BASE_DIR, 'frontend/build')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -135,7 +136,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
-        os.path.join(BASE_DIR,'frontend/build/static')
+    os.path.join(BASE_DIR, 'frontend/build/static')
 
 ]
 
@@ -143,8 +144,8 @@ STATICFILES_DIRS = [
 CORS_ORIGIN_ALLOW_ALL = True
 
 
-MEDIA_ROOT= os.path.join(BASE_DIR, "videos_uploaded")
-MEDIA_URL="/videos_uploaded/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = "media/"
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())

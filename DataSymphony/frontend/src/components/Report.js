@@ -5,6 +5,9 @@ import axios from "axios";
 
 import Graph from "./Graph";
 
+
+const MAIN_URL ='https://mtx-data-symphony.herokuapp.com'
+
 function Report({ reportID }) {
   const [isProcessed, setIsProcessed] = useState(false);
   const [reportVideo, SetReportVideo] = useState("");
@@ -24,10 +27,10 @@ function Report({ reportID }) {
   useEffect(() => {
     if (reportID !== "") {
       axios
-        .get(`http://127.0.0.1:8000/main/report/${reportID}`)
+        .get(`/main/report/${reportID}`)
         .then((response) => {
           setIsProcessed(true);
-          SetReportVideo(`http://127.0.0.1:8000${response.data.video}`);
+          SetReportVideo(`${response.data.video}`);
           SetTimeStamps(response.data.timestamps);
           SetTimeGraph(response.data.graph);
 
