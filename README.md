@@ -24,11 +24,11 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
     python -m venv ./env
     ```
 * Start the virtual environment using the script coresponding to your openrating system.
-        * Windows 
+    * Windows 
         ```bash
             \env\Scripts\activate.bat
         ``` 
-        * Linux 
+    * Linux 
         ```bash
             \env\Scripts\activate
         ```
@@ -72,4 +72,32 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
     ├───.gitignore
     ├───LICENSE
     └───start.bat
+    ```
+### Building the application
+#### Building the frontend
+* Navigate to ```DataSymphony\frontend```
+* Run the following command to install the node modules
+    ```bash
+    npm install
+    ```
+* Run the following command to build the react app.    
+    ```bash
+    npm run build
+    ```
+
+#### Building the backend(Django)
+* Navigate back to parent directory.
+* Run the following command, only run this command once
+    ```bash
+    python manage.py makemigrations
+    ```
+
+    ```bash
+    python manage.py migrate
+    ```
+
+### Running the application
+* Run the following the command to start the application, it will open on your default browser.
+    ```bash
+    python manage.py runserver
     ```
