@@ -113,7 +113,7 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
 
 ### Running the application
 
-- Run the following the command to start the application, it will be hosted this http://127.0.0.1:8000/.
+- Run the following the command to start the application, it will be hosted on http://127.0.0.1:8000/.
   ```bash
   python manage.py runserver
   ```
