@@ -90,6 +90,9 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
 
 #### Building the backend(Django)
 * Navigate back to parent directory.
+    ```bash
+    cd ..
+    ```
 * Run the following command, only run this command once
     ```bash
     python manage.py makemigrations
@@ -100,7 +103,7 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
     ```
 
 ### Running the application
-* Run the following the command to start the application, it will open on your default browser.
+* Run the following the command to start the application, it will be hosted this (url)["http://127.0.0.1:8000/"].
     ```bash
     python manage.py runserver
     ```
