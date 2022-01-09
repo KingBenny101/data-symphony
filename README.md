@@ -10,7 +10,7 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
 
 ## How to run the app
 > These steps were written such that anyone even beginners can run this app on their machines.
-* Setting up the workspace.  
+### Setting up the workspace.  
     * Clone the repository using the following command.
     ```bash
     git clone https://github.com/benstindavis/mtx-data-symphony.git
