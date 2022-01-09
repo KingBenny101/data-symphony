@@ -4,6 +4,6 @@
 
 
 ## Contributors
-- [Davidson] 
-- [Vignesh]
-- [Suryavarman]
+- [Davidson](https://github.com/Davidson-Paul)
+- [Suryavarman](https://github.com/Surya-Varman)
+- [Vignesh](https://github.com/Vigz-game)
