@@ -8,7 +8,7 @@ import Graph from "./Graph";
 function Report({ reportID }) {
   const [isProcessed, setIsProcessed] = useState(false);
   const [reportVideo, SetReportVideo] = useState("");
-  const [reportGraph,setReportGraph] = useState("");
+  const [reportGraph, setReportGraph] = useState("");
   const [timeStamps, SetTimeStamps] = useState("");
   const [timeGraph, SetTimeGraph] = useState("");
 
@@ -22,52 +22,50 @@ function Report({ reportID }) {
   };
 
   useEffect(() => {
-    console.log(reportID);
-    axios
-      .get(`http://127.0.0.1:8000/main/report/${reportID}`)
-      .then((response) => {
-        setIsProcessed(true);
-        SetReportVideo(`http://127.0.0.1:8000${response.data.video}`);
-        SetTimeStamps(response.data.timestamps);
-        SetTimeGraph(response.data.graph);
+    if (reportID != "") {
+      axios
+        .get(`http://127.0.0.1:8000/main/report/${reportID}`)
+        .then((response) => {
+          setIsProcessed(true);
+          SetReportVideo(`http://127.0.0.1:8000${response.data.video}`);
+          SetTimeStamps(response.data.timestamps);
+          SetTimeGraph(response.data.graph);
 
-        const makeBtnStyle = (l, index) => {
-          var btnSty = { backgroundColor: "#04AA6D" };
+          const makeBtnStyle = (l, index) => {
+            var btnSty = { backgroundColor: "#04AA6D" };
 
-          if (parseFloat(response.data.graph[l]) < 0.5) {
-            btnSty["backgroundColor"] = "red";
-          }
+            if (parseFloat(response.data.graph[l]) < 0.5) {
+              btnSty["backgroundColor"] = "red";
+            }
 
-          return (
-            <button
-              style={btnSty}
-              key={index}
-              onClick={() => handleSeekBtnClick({ l })}
-            >
-              {l}
-            </button>
+            return (
+              <button
+                style={btnSty}
+                key={index}
+                onClick={() => handleSeekBtnClick({ l })}
+              >
+                {l}
+              </button>
+            );
+          };
+
+          setBtnList(
+            Object.keys(response.data.timestamps).map((l, index) => {
+              return makeBtnStyle(l, index);
+            })
           );
-        };
 
-        setBtnList(
-          Object.keys(response.data.timestamps).map((l, index) => {
-            return makeBtnStyle(l, index);
-          })
-        );
+          const makeReportGraph = () => {
+            return <Graph dp={response.data.graph} />;
+          };
 
-
-
-        const makeReportGraph = () => {
-            return (<Graph dp={response.data.graph} />)
-        }
-
-
-        setReportGraph(makeReportGraph);
-      })
-      .catch((error) => {
-        console.log(error);
-        setIsProcessed(false);
-      });
+          setReportGraph(makeReportGraph);
+        })
+        .catch((error) => {
+          console.log(error);
+          setIsProcessed(false);
+        });
+    }
   }, [reportID]);
 
   const childRef = useRef(null);
@@ -89,12 +87,10 @@ function Report({ reportID }) {
       </div>
       <div className="reportItems" id="reportVideoNav">
         Video navigation with all the timestamps
-        <div class="btn-group">{btnList}</div>
+        <div className="btn-group">{btnList}</div>
       </div>
       <div className="reportItems" id="reportGraph">
-         {
-            reportGraph
-        }
+        {reportGraph}
       </div>
     </div>
   );
