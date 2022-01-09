@@ -16,7 +16,9 @@
     flex-direction: column;
 }
 
-
+#reportGraph {
+  display: block;
+}
 
 
 

@@ -23,7 +23,6 @@ function UploadFiles({handle}) {
       axios
       .get(`http://127.0.0.1:8000/main/view/${fileData.id}`)
       .then((response) => {
-        console.log(response.data);
         handle(response.data.id);
       })
       .catch((error) => {
@@ -48,7 +47,6 @@ function UploadFiles({handle}) {
       .get("http://127.0.0.1:8000/main/list/")
       .then((response) => {
         setEntries(response.data);
-        console.log(entries);
       })
       .catch((error) => {
         console.log(error);
@@ -59,16 +57,15 @@ function UploadFiles({handle}) {
     // Do something with the files
     setUploadBox("Uploading...");
 
-    console.log(acceptedFiles);
+
 
     var formData = new FormData();
     formData.append("video", acceptedFiles[0]);
 
-    console.log(formData);
+   
     axios
       .post("http://127.0.0.1:8000/main/create/", formData)
       .then((response) => {
-        console.log(response.data);
         setFileData(response.data);
         setUploadBox("Uploaded!!");
         setReportButton(true);
