@@ -26,15 +26,15 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
 * Start the virtual environment using the script coresponding to your openrating system.
     * Windows 
         ```bash
-            \env\Scripts\activate.bat
+            .\env\Scripts\activate.bat
         ``` 
     * Linux 
         ```bash
-            \env\Scripts\activate
+            .\env\Scripts\activate
         ```
 * Install all the requirements using the following command.
     ```bash
-    pip install -r mtx-data-symphony/DataSymphony/requirements.txt
+    pip install -r DataSymphony/requirements.txt
     ```
 * The workspace has been set up, if you faced no errors the your working directory tree should look like this.
     ```bash
@@ -76,6 +76,9 @@ Project made for MTX Hackathon 2021 by Team DataSymphony.
 ### Building the application
 #### Building the frontend
 * Navigate to ```DataSymphony\frontend```
+    ```bash
+    cd DataSymphony\frontend
+    ```
 * Run the following command to install the node modules
     ```bash
     npm install
